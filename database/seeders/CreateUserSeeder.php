@@ -87,7 +87,7 @@ class CreateUserSeeder extends Seeder
 
             [   
                 'nama' => 'Kurikulum',
-                'nip' => '195009010',
+                'nip' => '195009012',
                 'username' =>  'kurikulum',
                 'level' =>  'Kurikulum',
                 'email' =>  'kurikulum@gmail.com',

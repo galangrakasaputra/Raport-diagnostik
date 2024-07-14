@@ -29,6 +29,8 @@
   <strong>{{ $sukses }}</strong>
 </div>
 @endif
+
+<a href="{{ asset('template/template_siswa.xlsx') }}" class="btn btn-success">Unduh Tempate Excel</a>
  
     <button type="button" class="btn btn-success  btn-icon-split" data-toggle="modal" data-target="#importExcel">
       <span class="icon text-white-50">

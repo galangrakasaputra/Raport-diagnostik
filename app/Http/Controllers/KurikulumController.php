@@ -157,9 +157,10 @@ class KurikulumController extends Controller
     // Data Siswa
     public function data_siswa(Request $request, $kode)
     {
-        $tahun = Carbon::now()->format('y');
-        $siswa = Siswa::where('kode_kelas', $request->kode)
-            ->where('tahun', $tahun)->with('kelas')->get();
+        $tahun = Carbon::now();
+        $year = $tahun->year;
+        $siswa = DB::table('siswa')->where('kode_kelas', $kode)
+            ->where('tahun', $year)->get();
         $kelas = Kelas::find($kode);
         return view('kurikulum.siswa', [
             'title' => 'Data Siswa',

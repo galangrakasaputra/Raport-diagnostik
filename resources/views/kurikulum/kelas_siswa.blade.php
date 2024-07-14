@@ -2,29 +2,6 @@
 @section('content')
 
     <div class="container">
-      <div class="card-deck-wrapper">
-        <div class="card-deck">
-            <div class="card p-2">
-                <a class="card-block stretched-link text-decoration-none" href="/kurikulum/kelas_siswa/predikatsiswaA">
-                    <center><h6 class="card-title">PREDIKAT</h6>
-                    <p class="card-text"><b>A</b></p></center>
-                </a>
-            </div>
-            <div class="card p-2">
-                <a class="card-block stretched-link text-decoration-none" href="/kurikulum/kelas_siswa/predikatsiswaB">
-                     <center><h6 class="card-title">PREDIKAT</h6>
-                    <p class="card-text"><b>B</b></p></center>
-                </a>
-            </div>
-            <div class="card p-2">
-                <a class="card-block stretched-link text-decoration-none" href="/kurikulum/kelas_siswa/predikatsiswaC">
-                     <center><h6 class="card-title">PREDIKAT</h6>
-                    <p class="card-text"><b>C</b></p></center>
-                </a>
-            </div>
-          </div>
-        </div>
-  <hr>
         <div class="card shadow mb-4 mt-3">
                <div class="card-header py-3">
                   <h5 class="m-0 font-weight-bold">Data Kelas</h5>

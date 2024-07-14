@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Models\mapel;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class MapelImport implements ToModel
+class MapelImport implements ToModel, WithHeadingRow
 {
     /**
      * @param array $row
@@ -15,9 +16,9 @@ class MapelImport implements ToModel
     public function model(array $row)
     {
         return new mapel([
-            'kode' => $row[0],
-            'nama' => $row[1],
-            'kelas' => $row[2],
+            'kode' => $row['kode'],
+            'nama' => $row['nama'],
+            'kelas' => $row['kelas'],
         ]);
     }
 }

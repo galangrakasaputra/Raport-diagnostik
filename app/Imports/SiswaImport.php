@@ -5,8 +5,9 @@ namespace App\Imports;
 use App\Models\Siswa;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class SiswaImport implements ToModel
+class SiswaImport implements ToModel,WithHeadingRow
 {
     /**
      * @param array $row
@@ -16,18 +17,18 @@ class SiswaImport implements ToModel
     public function model(array $row)
     {
        return new Siswa([
-            'nis' => $row[0],
-            'nama' => $row[1],
-            'kode_kelas' => $row[2],
-            'email' => $row[3],
-            'gender' => $row[4],
-            'alamat' => $row[5],
-            'tahun' => $row[6],
-            'kecamatan' => $row[7],
-            'kota' => $row[8],
-            'kodepos' => $row[9],
-            'username' => $row[10],
-            'password' => Hash::make($row[11])
+            'nis' => $row['nis'],
+            'nama' => $row['nama'],
+            'kode_kelas' => $row['kode_kelas'],
+            'email' => $row['email'],
+            'gender' => $row['gender'],
+            'alamat' => $row['alamat'],
+            'tahun' => $row['tahun'],
+            'kecamatan' => $row['kecamatan'],
+            'kota' => $row['kota'],
+            'kodepos' => $row['kodepos'],
+            'username' => $row['username'],
+            'password' => Hash::make($row['password'])
         ]);
     }
 }

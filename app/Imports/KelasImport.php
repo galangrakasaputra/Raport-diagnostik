@@ -4,9 +4,10 @@ namespace App\Imports;
 
 use App\Models\kelas;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 // Implements (Interface)
-class KelasImport implements ToModel
+class KelasImport implements ToModel, WithHeadingRow
 {
     /**
      * @param array $row
@@ -16,10 +17,10 @@ class KelasImport implements ToModel
     public function model(array $row)
     {
         return new kelas([
-            'kode' => $row[0],
-            'kelas' => $row[1],
-            'jurusan' => $row[2],
-            'rombel' => $row[3],
+            'kode' => $row['kode'],
+            'kelas' => $row['kelas'],
+            'jurusan' => $row['jurusan'],
+            'rombel' => $row['rombongan_belajar'],
         ]);
     }
 }

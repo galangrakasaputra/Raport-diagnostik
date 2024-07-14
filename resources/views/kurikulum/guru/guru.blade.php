@@ -30,7 +30,9 @@
 			<strong>{{ $sukses }}</strong>
 		</div>
 		@endif
- 
+
+		<a href="{{ asset('template/template_guru.xlsx') }}" class="btn btn-success">Unduh Tempate Excel</a>
+
 		<button type="button" class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#importExcel">
 			<span class="icon text-white-50">
 			<i class="fa-solid fa-file-excel fa-lg"></i></span>
